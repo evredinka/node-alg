@@ -1,0 +1,14 @@
+{
+  "name": "node-alg",
+  "version": "1.0.0",
+  "description": "My Test Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Evgeniia Prozorova",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.3"
+  }
+}

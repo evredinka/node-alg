@@ -1,4 +1,4 @@
-const sort = require('../lib/selection_sort');
+const sort = require('../../lib/sort/selection_sort');
 const expect = require("chai").expect;
 
 describe('Selection Sort', () => {

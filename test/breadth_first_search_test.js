@@ -1,7 +1,7 @@
 let search = require('../lib/breadth_first_search').search;
 const expect = require("chai").expect;
 
-describe('Breadth First Search', function () {
+describe('Breadth First Search', () => {
 
     const graph = {
         berlin: ["london", "madrid"],
@@ -10,19 +10,19 @@ describe('Breadth First Search', function () {
         rome: ["madrid", "berlin"]
     };
 
-    it('should find a connection from Berlin to London', function () {
+    it('should find a connection from Berlin to London', () => {
         expect(search(graph, "berlin", "london")).to.eql(true);
     });
 
-    it('should find a connection from Rome to London', function () {
+    it('should find a connection from Rome to London', () => {
         expect(search(graph, "rome", "london")).to.eql(true);
     });
 
-    it('should not find a connection from Berlin to Rome', function () {
+    it('should not find a connection from Berlin to Rome', () => {
         expect(search(graph, "berlin", "rome")).to.eql(false);
     });
 
-    it('should not find a connection from London to Rome', function () {
+    it('should not find a connection from London to Rome', () => {
         expect(search(graph, "london", "rome")).to.eql(false);
     });
 
@@ -31,11 +31,11 @@ describe('Breadth First Search', function () {
         london: ["berlin"]
     };
 
-    it('should find a connection from Berlin to London', function () {
+    it('should find a connection from Berlin to London', () => {
         expect(search(cyclicGraph, "berlin", "london")).to.eql(true);
     });
 
-    it('should not find a connection from Berlin to Rome', function () {
+    it('should not find a connection from Berlin to Rome', () => {
         expect(search(cyclicGraph, "berlin", "rome")).to.eql(false);
     });
 

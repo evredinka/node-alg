@@ -1,7 +1,7 @@
-const toTree = require('../lib/parse_tree').toTree;
-const evaluate = require('../lib/parse_tree').evaluate;
-const isNumber = require('../lib/parse_tree').isNumber;
-const isOperator = require('../lib/parse_tree').isOperator;
+const toTree = require('../../lib/tree/parse_tree').toTree;
+const evaluate = require('../../lib/tree/parse_tree').evaluate;
+const isNumber = require('../../lib/tree/parse_tree').isNumber;
+const isOperator = require('../../lib/tree/parse_tree').isOperator;
 
 const chai = require("chai");
 const assert = chai.assert;
@@ -10,7 +10,7 @@ const chaiExclude = require('chai-exclude');
 chai.use(chaiExclude);
 
 
-describe('Parse tree', function () {
+describe('Parse tree', () => {
 
     it('should parse and evaluate ( 1 + 2 )', () => {
         const actual = toTree("( 1 + 2 )");
